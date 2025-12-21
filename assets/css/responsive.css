@@ -1,0 +1,451 @@
+/* Responsividade - Media Queries para diferentes tamanhos de tela */
+
+/* Adicione seus estilos responsivos aqui */
+  /* Tipografia */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Header */
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  header nav ul li {
+    margin: 0.3rem;
+  }
+
+  header nav ul li a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  /* Main */
+  main {
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Seções */
+  section {
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  section p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Cards */
+  .card {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Botões */
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-lg {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  /* Inputs */
+  input,
+  textarea,
+  select {
+    padding: var(--spacing-md) 0.75rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  /* Containers */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Row */
+  .row {
+    margin-right: calc(var(--spacing-sm) * -1);
+    margin-left: calc(var(--spacing-sm) * -1);
+  }
+
+  .col {
+    padding-right: var(--spacing-sm);
+    padding-left: var(--spacing-sm);
+  }
+}
+
+/* ==================== Mobile (480px) ==================== */
+@media (max-width: 480px) {
+  /* Tipografia */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  /* Header */
+  header {
+    padding: var(--spacing-md) 0;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  header nav ul li {
+    margin: 0.2rem;
+  }
+
+  header nav ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+
+  /* Main */
+  main {
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Seções */
+  section {
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    border-radius: 8px;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+  }
+
+  section h2::after {
+    width: 50px;
+  }
+
+  section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Cards */
+  .card {
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: var(--spacing-md);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  /* Botões */
+  button,
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    min-height: 44px;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .btn-lg {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  /* Inputs */
+  input,
+  textarea,
+  select {
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-size: 16px;
+  }
+
+  label {
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Footer */
+  footer {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    margin-top: var(--spacing-2xl);
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  /* Containers */
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .container-sm,
+  .container-lg {
+    max-width: 100%;
+  }
+
+  /* Row */
+  .row {
+    margin-right: calc(var(--spacing-xs) * -1);
+    margin-left: calc(var(--spacing-xs) * -1);
+  }
+
+  .col {
+    padding-right: var(--spacing-xs);
+    padding-left: var(--spacing-xs);
+    width: 100%;
+  }
+
+  /* Badges */
+  .badge {
+    font-size: 0.75rem;
+    padding: var(--spacing-xs) 0.4rem;
+  }
+
+  /* Alerts */
+  .alert {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+
+  /* Tables responsivas */
+  table {
+    font-size: 0.85rem;
+  }
+
+  /* Divider */
+  hr,
+  .divider {
+    margin: var(--spacing-md) 0;
+  }
+
+  /* Pagination */
+  .pagination {
+    gap: var(--spacing-xs);
+  }
+
+  .pagination li a {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.85rem;
+  }
+
+  /* Navigation stacking */
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ==================== Small Mobile (320px) ==================== */
+@media (max-width: 360px) {
+  /* Tipografia */
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* Header */
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  /* Seções */
+  section {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Botões */
+  button,
+  .btn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  /* Inputs */
+  input,
+  textarea,
+  select {
+    padding: var(--spacing-sm) 0.5rem;
+  }
+}
+
+/* ==================== Large Screens (1200px+) ==================== */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .container-lg {
+    max-width: 1400px;
+  }
+
+  section {
+    padding: 3rem;
+  }
+
+  header nav ul li a {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* ==================== XL Screens (1400px+) ==================== */
+@media (min-width: 1400px) {
+  main {
+    max-width: 1300px;
+  }
+
+  .container-lg {
+    max-width: 1300px;
+  }
+}
+
+/* ==================== Print ==================== */
+@media print {
+  header,
+  footer,
+  nav {
+    display: none;
+  }
+
+  body {
+    background: var(--white);
+    color: #000;
+  }
+
+  section {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #000;
+  }
+}
+
+/* ==================== Prefers Reduced Motion ==================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==================== Dark Mode (opcional) ==================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #e0e0e0;
+    --text-light: #a0a0a0;
+    --light-bg: #1a1a1a;
+    --white: #2a2a2a;
+    --dark-bg: #0f0f0f;
+    --border-color: #404040;
+  }
+
+  body {
+    background: var(--dark-bg);
+  }
+
+  section {
+    background-color: var(--white);
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: var(--white);
+    color: var(--text-color);
+  }
+}

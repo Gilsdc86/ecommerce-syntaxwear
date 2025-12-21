@@ -1,0 +1,182 @@
+/* Layout - Header, Main, Footer */
+
+/* Adicione seus estilos de layout aqui */
+
+header h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-light),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navegação */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+header nav ul li {
+  margin: var(--spacing-sm);
+}
+
+header nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 168, 255, 0.3);
+}
+
+header nav ul li a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 168, 255, 0.2);
+}
+
+/* Main */
+main {
+  max-width: 1200px;
+  margin: var(--spacing-2xl) auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Seções */
+section {
+  background-color: var(--white);
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+section:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: var(--spacing-lg);
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-light));
+  border-radius: 2px;
+}
+
+section p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  width: 100%;
+}
+
+.container-sm {
+  max-width: 800px;
+}
+
+.container-lg {
+  max-width: 1400px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Row e Colunas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--spacing-md) * -1);
+  margin-left: calc(var(--spacing-md) * -1);
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-right: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color) 0%,
+    var(--primary-dark) 100%
+  );
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  margin-top: var(--spacing-3xl);
+  border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: var(--accent-light);
+}
+
+/* Seções com fundo alternado */
+section.alt {
+  background-color: var(--light-bg);
+}
+
+/* Seções com destaque */
+section.highlight {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 168, 255, 0.05) 0%,
+    rgba(253, 217, 61, 0.05) 100%
+  );
+  border: 1px solid var(--primary-light);
+}

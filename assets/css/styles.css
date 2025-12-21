@@ -1,43 +1,68 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Arquivo CSS antigo - Use os arquivos modulares em vez deste */
 }
 
 /* Variáveis de cores */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  --text-color: #333;
-  --light-bg: #ecf0f1;
+  --primary-color: #00a8ff;
+  --primary-dark: #0084cc;
+  --secondary-color: #1a1a2e;
+  --accent-color: #ff6b6b;
+  --accent-light: #ffd93d;
+  --text-color: #2c3e50;
+  --text-light: #7f8c8d;
+  --light-bg: #f8f9fa;
   --white: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Tipografia base */
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   color: var(--text-color);
   line-height: 1.6;
-  background-color: var(--light-bg);
+  background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+  min-height: 100vh;
 }
 
 /* Header */
 header {
-  background-color: var(--secondary-color);
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color) 0%,
+    var(--primary-dark) 100%
+  );
   color: var(--white);
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
   text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-light),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 header nav ul {
@@ -45,88 +70,210 @@ header nav ul {
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 header nav ul li {
-  margin: 0 1.5rem;
+  margin: 0.5rem;
 }
 
 header nav ul li a {
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: var(--transition);
+  display: inline-block;
+  border: 2px solid transparent;
 }
 
 header nav ul li a:hover {
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 168, 255, 0.3);
 }
 
 /* Main */
 main {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   padding: 0 1rem;
 }
 
 section {
   background-color: var(--white);
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+section:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 section h2 {
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-light));
+  border-radius: 2px;
 }
 
 section p {
-  color: var(--text-color);
-  font-size: 1rem;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
 /* Footer */
 footer {
-  background-color: var(--secondary-color);
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color) 0%,
+    var(--primary-dark) 100%
+  );
   color: var(--white);
   text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+  border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Botões genéricos */
+button,
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background-color: var(--accent-light);
+  color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #ffc107;
+  transform: translateY(-2px);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   header nav ul {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
 
   header nav ul li {
-    margin: 0.5rem 0;
+    margin: 0.3rem;
+  }
+
+  header nav ul li a {
+    padding: 0.6rem 1.2rem;
   }
 
   section {
     padding: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   section h2 {
     font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  main {
+    margin: 2rem auto;
   }
 }
 
 @media (max-width: 480px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
   header nav ul li {
-    margin: 0 0.5rem;
+    margin: 0.2rem;
+  }
+
+  header nav ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
   }
 
   main {
     padding: 0 0.5rem;
+    margin: 1.5rem auto;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  button,
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }

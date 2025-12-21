@@ -1,0 +1,181 @@
+/* Tipografia - Estilos de Texto e Fontes */
+
+/* Adicione seus estilos de tipografia aqui */
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-lg);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--primary-dark);
+}
+
+/* Texto forte e ênfase */
+strong,
+b {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* Pequeno texto */
+small {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Código inline */
+code,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: var(--dark-bg);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  color: var(--accent-color);
+}
+
+code {
+  font-size: 0.9rem;
+}
+
+pre {
+  overflow-x: auto;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-md);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Blocos de citação */
+blockquote {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--primary-color);
+  background-color: var(--light-bg);
+  border-radius: var(--radius-md);
+  font-style: italic;
+  color: var(--text-light);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Listas */
+ul,
+ol {
+  margin: var(--spacing-lg) 0;
+  padding-left: var(--spacing-xl);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
+}
+
+/* Marcadores inline */
+.mark,
+mark {
+  background-color: var(--accent-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+/* Texto deletado e inserido */
+del {
+  color: var(--error-color);
+  text-decoration: line-through;
+}
+
+ins {
+  background-color: var(--success-color);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+/* Títulos com underline */
+.section-title {
+  position: relative;
+  padding-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-light));
+  border-radius: 2px;
+}
