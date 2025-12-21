@@ -1,0 +1,132 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --text-color: #333;
+  --light-bg: #ecf0f1;
+  --white: #ffffff;
+}
+
+/* Tipografia base */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--light-bg);
+}
+
+/* Header */
+header {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 0 1.5rem;
+}
+
+header nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Main */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: var(--white);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+section p {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav ul li {
+    margin: 0 0.5rem;
+  }
+
+  main {
+    padding: 0 0.5rem;
+  }
+}
