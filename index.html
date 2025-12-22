@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SyntaxWear - E-commerce 2.0</title>
-    <!-- CSS Modular -->
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/typography.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estrutura — Ecommerce SyntaxWear</title>
     <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
-    <header>
-      <h1>SyntaxWear 1</h1>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+    <header role="banner">
+      <div class="container">
+        <h1 id="site-title">SyntaxWear</h1>
+        <nav aria-label="Navegação principal">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categorias</a></li>
+            <li><a href="#featured-products">Destaques</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section id="home">
-        <h2>Bem-vindo à SyntaxWear</h2>
-        <p>A melhor loja de roupas para programadores</p>
+    <main role="main">
+      <!-- Seção Hero -->
+      <section id="hero" aria-labelledby="hero-title">
+        <h2 id="hero-title">Hero</h2>
       </section>
 
-      <section id="produtos">
-        <h2>Nossos Produtos</h2>
-        <p>Confira nossa coleção exclusiva.</p>
+      <!-- Seção de categorias (ex: tênis) -->
+      <section id="categories" aria-labelledby="categories-title">
+        <h2 id="categories-title">Categorias — Tênis</h2>
       </section>
 
-      <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Conheça a história da SyntaxWear.</p>
-      </section>
-
-      <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco.</p>
+      <!-- Grid com produtos em destaque -->
+      <section id="featured-products" aria-labelledby="featured-title">
+        <h2 id="featured-title">Produtos em Destaque</h2>
+        <div class="products-grid" aria-hidden="true">
+          <!-- grid placeholder -->
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 SyntaxWear. Todos os direitos reservados.</p>
+    <footer role="contentinfo">
+      <div class="container">
+        <h2 class="visually-hidden" id="footer-title">Rodapé</h2>
+        <address id="contact">
+          <!-- informações de contato (placeholder) -->
+        </address>
+        <nav aria-label="Links do rodapé">
+          <ul>
+            <!-- links úteis (placeholder) -->
+          </ul>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
