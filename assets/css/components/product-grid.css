@@ -1,39 +1,39 @@
-
-.card{
+.card {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   border-radius: 20px;
-  
 }
 
 .highlight {
   grid-area: highlight;
-  background-image: url(../../images/products/93f6df06-b574-4d35-aa24-5a3cba776bae3.jpg);}
-  
+  background-image: url(../../images/products/93f6df06-b574-4d35-aa24-5a3cba776bae3.jpg);
+}
 
 .sneakers-purple {
   grid-area: sneakers-purple;
-  background-image: url(../../images/products/roxo-verde-grid.jpg);}
-  
-.model{
+  background-image: url(../../images/products/roxo-verde-grid.jpg);
+}
+
+.model {
   grid-area: model;
-  background-image: url(../../images/products/modelo-feminino.jpg);}
-  
+  background-image: url(../../images/products/modelo-feminino.jpg);
+}
+
 .sneakers-color {
   grid-area: sneakers-color;
-  background-image: url(../../images/products/futurista-grid.jpg);}
- 
-.sneakers-white{
+  background-image: url(../../images/products/futurista-grid.jpg);
+}
+
+.sneakers-white {
   grid-area: sneakers-white;
-  background-image: url(../../images/products/preto-branco-grid.jpg);}
- 
+  background-image: url(../../images/products/preto-branco-grid.jpg);
+}
 
-.sneakers-silver{
-  grid-area:sneakers-silver;
+.sneakers-silver {
+  grid-area: sneakers-silver;
   background-image: url(../../images/products/mordeno-grid.jpg);
-
 }
 
 .grid-section {
@@ -47,7 +47,6 @@
   gap: 30px;
 }
 
-
 .top1-content {
   position: absolute;
   left: 50%;
@@ -57,20 +56,47 @@
 }
 
 .card-title {
- color: #EDEDED;
- font-size: 1.25rem;
- font-weight: 400;
- margin-bottom: 10PX;
+  color: #ededed;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .card-subtitle {
-  color: #EDEDED;
+  color: #ededed;
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-.cta-group{
-    display: flex;
-    gap: 10px;
+.cta-group {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid-section {
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "highlight highlight"
+      "sneakers-white sneakers-white"
+      "model sneakers-color"
+      "model sneakers-silver"
+      "sneakers-purple sneakers-purple";
+      max-width: 100%;
+      gap: 0.625rem;
+  }
+}
+
+.highlight{
+min-height: 500px;
+}
+
+.model{
+  min-height: 370px;
+}
+
+.sneakers-white, .sneakers-purple{
+  min-height: 190px;
 }
